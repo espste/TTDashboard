@@ -1,6 +1,20 @@
 const daily = document.getElementById("pd");
 const weekly = document.getElementById("pw");
 const monthly = document.getElementById("pm");
+const periods = document.getElementsByClassName("period");
+
+/* Set active state */
+/* for (let i = 0; i < periods.length; i++) {
+    periods[i].addEventListener('click', () => {
+        const current = document.getElementsByClassName("span#pd.period.active");
+
+        if(current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+        }    
+        this.className += " active";
+
+    });
+} */
 
 
 /* WORK */
@@ -8,7 +22,6 @@ daily.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("hours").textContent = `${data[0].timeframes.daily.current}hrs`;
             document.getElementById("lwHours").innerHTML = `Last week: ${data[0].timeframes.daily.previous}hrs`;
         })
@@ -21,7 +34,6 @@ weekly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("hours").textContent = `${data[0].timeframes.weekly.current}hrs`;
             document.getElementById("lwHours").innerHTML = `Last week: ${data[0].timeframes.weekly.previous}hrs`;
         })
@@ -34,7 +46,6 @@ monthly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("hours").textContent = `${data[0].timeframes.monthly.current}hrs`;
             document.getElementById("lwHours").innerHTML = `Last week: ${data[0].timeframes.monthly.previous}hrs`;
         })
@@ -48,7 +59,6 @@ daily.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Playhours").textContent = `${data[1].timeframes.daily.current}hrs`;
             document.getElementById("PlaylwHours").innerHTML = `Last week: ${data[1].timeframes.daily.previous}hrs`;
         })
@@ -61,7 +71,6 @@ weekly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Playhours").textContent = `${data[1].timeframes.weekly.current}hrs`;
             document.getElementById("PlaylwHours").innerHTML = `Last week: ${data[1].timeframes.weekly.previous}hrs`;
         })
@@ -74,7 +83,6 @@ monthly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Playhours").textContent = `${data[1].timeframes.monthly.current}hrs`;
             document.getElementById("PlaylwHours").innerHTML = `Last week: ${data[1].timeframes.monthly.previous}hrs`;
         })
@@ -88,7 +96,6 @@ daily.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Studyhours").textContent = `${data[2].timeframes.daily.current}hrs`;
             document.getElementById("StudylwHours").innerHTML = `Last week: ${data[2].timeframes.daily.previous}hrs`;
         })
@@ -101,7 +108,6 @@ weekly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Studyhours").textContent = `${data[2].timeframes.weekly.current}hrs`;
             document.getElementById("StudylwHours").innerHTML = `Last week: ${data[2].timeframes.weekly.previous}hrs`;
         })
@@ -114,7 +120,6 @@ monthly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Studyhours").textContent = `${data[2].timeframes.monthly.current}hrs`;
             document.getElementById("StudylwHours").innerHTML = `Last week: ${data[2].timeframes.monthly.previous}hrs`;
         })
@@ -128,7 +133,6 @@ daily.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Exercisehours").textContent = `${data[3].timeframes.daily.current}hrs`;
             document.getElementById("ExerciselwHours").innerHTML = `Last week: ${data[3].timeframes.daily.previous}hrs`;
         })
@@ -141,7 +145,6 @@ weekly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Exercisehours").textContent = `${data[3].timeframes.weekly.current}hrs`;
             document.getElementById("ExerciselwHours").innerHTML = `Last week: ${data[3].timeframes.weekly.previous}hrs`;
         })
@@ -154,7 +157,6 @@ monthly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Exercisehours").textContent = `${data[3].timeframes.monthly.current}hrs`;
             document.getElementById("ExerciselwHours").innerHTML = `Last week: ${data[3].timeframes.monthly.previous}hrs`;
         })
@@ -168,7 +170,6 @@ daily.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Socialhours").textContent = `${data[4].timeframes.daily.current}hrs`;
             document.getElementById("SociallwHours").innerHTML = `Last week: ${data[4].timeframes.daily.previous}hrs`;
         })
@@ -181,7 +182,6 @@ weekly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Socialhours").textContent = `${data[4].timeframes.weekly.current}hrs`;
             document.getElementById("SociallwHours").innerHTML = `Last week: ${data[4].timeframes.weekly.previous}hrs`;
         })
@@ -194,7 +194,6 @@ monthly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("Socialhours").textContent = `${data[4].timeframes.monthly.current}hrs`;
             document.getElementById("SociallwHours").innerHTML = `Last week: ${data[4].timeframes.monthly.previous}hrs`;
         })
@@ -208,7 +207,6 @@ daily.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("SelfCareHours").textContent = `${data[5].timeframes.daily.current}hrs`;
             document.getElementById("SelfCarelwHours").innerHTML = `Last week: ${data[5].timeframes.daily.previous}hrs`;
         })
@@ -221,7 +219,6 @@ weekly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("SelfCareHours").textContent = `${data[5].timeframes.weekly.current}hrs`;
             document.getElementById("SelfCarelwHours").innerHTML = `Last week: ${data[5].timeframes.weekly.previous}hrs`;
         })
@@ -234,7 +231,6 @@ monthly.addEventListener('click', () => {
     fetch("data.json")
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             document.getElementById("SelfCareHours").textContent = `${data[5].timeframes.monthly.current}hrs`;
             document.getElementById("SelfCarelwHours").innerHTML = `Last week: ${data[5].timeframes.monthly.previous}hrs`;
         })

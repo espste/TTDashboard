@@ -33,6 +33,12 @@ body
     display: none;
 }
 
+span#pd.period.active
+{
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+}
 
 img
 {
@@ -362,6 +368,7 @@ img
 
 @media (max-width: 720px) {
     body {
+        min-height: 100vh;
         background-color: #232323;
     }
 
