@@ -1,20 +1,19 @@
 const daily = document.getElementById("pd");
 const weekly = document.getElementById("pw");
 const monthly = document.getElementById("pm");
-const periods = document.getElementsByClassName("period");
 
 /* Set active state */
 /* for (let i = 0; i < periods.length; i++) {
     periods[i].addEventListener('click', () => {
-        const current = document.getElementsByClassName("span#pd.period.active");
+        const current = document.getElementsByClassName("period");
 
         if(current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
+            current[0].className = current[0].className.add("active");
         }    
-        this.className += " active";
+        this.className += "active";
 
     });
-} */
+}  */
 
 
 /* WORK */
