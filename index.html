@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Time Tracking Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+        <div class="container">
+            <div class="grid-profile">
+                <div class="profile-content">
+                    <img src="/images/image-jeremy.png" alt="" />
+                    <p class="profile-title">Report for</p>
+                    <p class="profile-name">Jeremy<br>Robson</p>
+                </div>
+                <span class="period active" id="pd">Daily</span>
+                <span class="period" id="pw">Weekly</span>
+                <span class="period" id="pm">Monthly</span>
+            </div><!-- /grid-profile -->
+            
+            <div class="grid-work grid-small">
+                <img src="/images/icon-work.svg" alt="" class="icons">
+                <div class="work-content">
+                    <h2 class="widget-title">Work</h2>
+                    <img class="ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <p class="time">
+                    <p class="current-time" id="hours">5hrs</p>
+                    <p class="last-time" id="lwHours">Last Week - 7hrs</p>
+                    </p>
+                </div>
+            </div><!-- /work -->
+
+            <div class="grid-play grid-small">
+                <img src="/images/icon-play.svg" alt="" class="icons">
+                <div class="play-content">
+                    <h2 class="widget-title">Play</h2>
+                    <img class="ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <p class="time">
+                    <p class="current-time" id="Playhours">1hrs</p>
+                    <p class="last-time" id="PlaylwHours">Last week: 2hrs</p>
+                    </p>
+                </div>
+            </div><!-- /play -->
+
+            <div class="grid-study grid-small">
+                <img src="/images/icon-study.svg" alt="" class="icons study-icon">
+                <div class="study-content">
+                    <h2 class="widget-title">Study</h2>
+                    <img class="ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <p class="time">
+                    <p class="current-time" id="Studyhours">0hrs</p>
+                    <p class="last-time" id="StudylwHours">Last week: 1hrs</p>
+                    </p>
+                </div>
+            </div><!-- /study -->
+
+            <div class="grid-exercise grid-small">
+                <img src="/images/icon-exercise.svg" alt="" class="icons exercise-icon">
+                <div class="exercise-content">
+                    <h2 class="widget-title">Exercise</h2>
+                    <img class="ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <p class="time">
+                    <p class="current-time" id="Exercisehours">1hrs</p>
+                    <p class="last-time" id="ExerciselwHours">Last week: 1hrs</p>
+                    </p>
+                </div>
+            </div><!-- /exercise -->
+
+            <div class="grid-social grid-small">
+                <img src="/images/icon-social.svg" alt="" class="icons social-icon">
+                <div class="social-content">
+                    <h2 class="widget-title">Social</h2>
+                    <img class="ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <p class="time">
+                    <p class="current-time" id="Socialhours">1hrs</p>
+                    <p class="last-time" id="SociallwHours">Last week: 3hrs</p>
+                    </p>
+                </div>
+            </div><!-- /social -->
+
+            <div class="grid-selfCare grid-small">
+                <img src="/images/icon-self-care.svg" alt="" class="icons selfCare-icon">
+                <div class="selfCare-content">
+                    <h2 class="widget-title">Self Care</h2>
+                    <img class="ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <p class="time">
+                    <p class="current-time" id="SelfCareHours">0hrs</p>
+                    <p class="last-time" id="SelfCarelwHours">Last week: 1hrs</p>
+                    </p>
+                </div>
+            </div><!-- /selfCare --> 
+
+        </div><!-- /container -->
+
+        <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> - 
+            Coded by <a href="https://espste.github.io/Portfolio/">Espen Stensland</a>
+        </div>
+        </footer>
+
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="data.json"></script>
+  </body>
+</html>
